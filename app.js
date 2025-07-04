@@ -10,6 +10,7 @@ import { Strategy as GoogleStrategy } from 'passport-google-oauth20';
 import findOrCreate from "mongoose-findorcreate";
 
 const app = express();
+const port = process.env.PORT || 3000;
 
 app.use(express.static("public"));
 app.set ('view engine', 'ejs');
@@ -168,6 +169,6 @@ app.get("/logout", (req, res)=>{
     });
 });
 
-app.listen(3000, function() {
+app.listen(port, ()=> {
   console. log("Server started on port 3000.");
 });
