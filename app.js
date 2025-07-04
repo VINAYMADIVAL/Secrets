@@ -11,6 +11,7 @@ import findOrCreate from "mongoose-findorcreate";
 
 const app = express();
 const port = process.env.PORT || 3000;
+console.log("PORT env var:", process.env.PORT);
 
 app.use(express.static("public"));
 app.set ('view engine', 'ejs');
